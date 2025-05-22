@@ -190,19 +190,52 @@ nav a {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 20px;
   width: 250px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 550px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
   color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.addtocart {
-    box-shadow: 0 2.5px 8px #333;
-    padding: 10px;
-    margin: auto;
-    margin-top: 10px;
-    text-align: center;
-    border-radius: 8px;
-    cursor: pointer;
+#product-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch; 
+}
+
+
+.buttonwrapper {
+  margin-top: auto;
+}
+
+button {
+  background-color: rgba(251,75,2,1);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #e91e63; /* Slightly darker pink on hover */
+  transform: scale(1.05); /* Slight pop effect */
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.product-card button {
+  display: inline-block;
+  margin-top: 10px;
 }
 
 * {box-sizing:border-box}
@@ -307,5 +340,5 @@ nav a {
 
 @font-face {
 font-family: "Lemon";
-src: url(../font/Lemon_Tuesday.otf) format('opentype'),
+src: url(../font/Lemon_Tuesday.otf) format('opentype');
 }
