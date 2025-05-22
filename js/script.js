@@ -18,7 +18,7 @@ fetch("data/Product.xml")
           <h3>${name}</h3>
           <p>Price: R${price}</p>
           <p>Description: ${description}</p>
-          <button onclick="addToCart('${name}', ${price})">Add to Cart</button>
+          <div class="buttonwrapper"><button class="addingtocart" onclick="addToCart('${name}', ${price})">Add to Cart</button></div>
         </div>`;
     }
     document.getElementById("product-list").innerHTML = output;
